@@ -21,3 +21,27 @@ export const festivalObj = [
         festivalTo:"2024.03.03",     
     }
 ];
+
+export const eventObj = [
+    {
+        subTitle:"제주항공",
+        mainTitle:"타임세일 특가상품",
+        href:"./img/event/discountEvent1.png"
+    },
+    {
+        subTitle:"제주 숙소 예약시",
+        mainTitle:"렌터카 무료",
+        href:"./img/event/discountEvent2.png"
+    },
+    {
+        subTitle:"제주도 오셜록",
+        mainTitle:"'티 뮤지엄' 무료 체험",
+        href:"./img/event/discountEvent3.png"
+    },
+        {
+        subTitle:"가방을 부탁해",
+        mainTitle:"1회 무료 체험권 증정",
+        href:"./img/event/discountEvent4.png"
+    },
+
+];
