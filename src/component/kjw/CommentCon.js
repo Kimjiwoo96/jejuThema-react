@@ -1,21 +1,55 @@
 import React from 'react'
 import CommentConStyle from "../../scss/kjw/CommentCon.module.scss"
 
-function CommentCon() {
-    return (
-        <div className={CommentConStyle.commentCon}>
-            <div className={CommentConStyle.commentinfo}>
-                <section>
-                    <p className={CommentConStyle.userId}>이건내아이디</p>
-                    <span className={CommentConStyle.commentDate}>2023.12.23</span>
-                </section>
+function CommentCon({commentdata}) {
 
-                <span className={CommentConStyle.delBtn}>삭제</span>
-            </div>
-            <div className={CommentConStyle.commentCons}>
-                <p class="content">왜 안되는거야 나를 화나게 하지마</p>
-            </div>
-        </div>    
+    var today = new Date();
+    var year = today.getFullYear();
+    var month = ('0' + (today.getMonth() + 1)).slice(-2);
+    var day = ('0' + today.getDate()).slice(-2);
+    var dateString = year + '-' + month  + '-' + day;
+
+    console.log("??",typeof commentdata)
+
+    return (
+        <>
+            {
+            commentdata &&
+                commentdata.map((el, idx) => (
+                    <div className={CommentConStyle.commentCon} key={idx}>
+                        <div>
+                            <div className={CommentConStyle.commentinfo}>
+                                <section>
+                                    <p className={CommentConStyle.userId}>{el.nicknameValue}</p>
+                                    <span className={CommentConStyle.commentDate}>{dateString}</span>
+                                </section>
+                                <span className={CommentConStyle.delBtn}>삭제</span>
+                            </div>
+                            <div className={CommentConStyle.commentCons}>
+                                <p className="content">{el.commentConText}</p>
+                            </div>
+                        </div>
+                    </div> 
+                )) 
+             }
+
+
+                <div className={CommentConStyle.commentCon}>
+                    <div>
+                        <div className={CommentConStyle.commentinfo}>
+                            <section>
+                                <p className={CommentConStyle.userId}>나는 닉네임</p>
+                                <span className={CommentConStyle.commentDate}>{dateString}</span>
+                            </section>
+                            <span className={CommentConStyle.delBtn}>삭제</span>
+                        </div>
+                        <div className={CommentConStyle.commentCons}>
+                            <p className="content">댓글을 입력해보세요!</p>
+                        </div>
+                    </div>
+                </div> 
+
+        </> 
     )
 }
 

@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Comment from '../component/kjw/Comment';
-import CommentCon from '../component/kjw/CommentCon';
 
 function Comment_P() {
 
@@ -11,7 +10,6 @@ function Comment_P() {
         <div style={marginWrap}>
             <h4 style={marginBottom}>제주도 최고의 여행지를 이웃과 함께 공유해보세요!</h4>
             <Comment></Comment>
-            <CommentCon></CommentCon>
         </div>
     )
 }
