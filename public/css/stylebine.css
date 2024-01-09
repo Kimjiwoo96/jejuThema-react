@@ -1,3 +1,25 @@
+:root {
+  --main-font-color: #000f22;
+  /* 메인 폰트컬러 */
+
+  --main_color1: #0675c1;
+  /* 메인컬러 1 */
+
+  --main_color2: #059b84;
+  /* 메인컬러 2 */
+
+  --main_color3: #d48121;
+  /* 메인컬러 3 */
+
+  --contents_bg_color: #F8F8F8;
+  /*컨텐츠 배경색*/
+
+  --contents_border_color: #ECECEC;
+  /*컨텐츠 border 색깔*/
+}
+
+
+
 @font-face {
   font-family: 'GmarketSansMedium';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
@@ -26,10 +48,16 @@ li {
   text-decoration: none;
 }
 
+
+#hd .navbar {
+  padding: 0;
+}
+
 .logo img {
   max-width: 100%;
   height: auto;
 }
+
 
 #gnbs {
   width: 650px;
@@ -37,6 +65,14 @@ li {
   margin: 0;
   flex-wrap: wrap;
 
+}
+
+#gnbs li {
+  padding: 0 1rem;
+}
+
+#gnbs li:last-child {
+  padding-right: 0;
 }
 
 #gnbs a {
@@ -48,7 +84,8 @@ li {
   /* padding: 0 10px; */
   text-decoration: none;
   color: var(--main-font-color);
-  padding-right: 0;
+  display: block;
+  padding: 0;
 
 }
 
@@ -63,11 +100,15 @@ li {
   height: 3px;
   width: 0;
   left: 0;
-  bottom: -10px;
+  bottom: 30px;
   transition: .3s;
 
 }
 
 #gnbs a:hover::after {
   width: 100%;
+}
+
+button.navbar-toggler {
+  border: 0;
 }
