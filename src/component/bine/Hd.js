@@ -13,18 +13,18 @@ function Hd() {
       <Navbar expand="lg">
         <Container>
           <Navbar.Brand href="#home" className='logo'>
-            <img src="/img/logo.png" alt="logo" />
+            <img src="/img/logo.png" alt="제주테마여행" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
             <Nav className={`${HdStyle.gnbs} `}>
               {
                 naviObj.map((el, idx) => (
-                  <li key={idx}>
+                  <Nav.Item as="li" key={idx}>
                     <Nav.Link href={el.href}>
                       {el.title}
                     </Nav.Link>
-                  </li>
+                  </Nav.Item>
                 ))
               }
             </Nav>

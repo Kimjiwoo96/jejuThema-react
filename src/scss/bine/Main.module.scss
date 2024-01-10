@@ -1,0 +1,36 @@
+$main_font_color: #000f22;
+$main_color1: #0675c1;
+$main_color2: #059b84;
+$main_color3: #d48121;
+$contents_bg_color: #F8F8F8;
+$contents_border_color: #ECECEC;
+
+.banner {}
+
+
+.bannerSlide {
+  img {
+    height: auto;
+    width: 100%;
+    display: block;
+  }
+  
+}
+
+
+// 모바일 버전
+@media screen and (max-width: 768px) {
+  .banner {}
+
+  .bannerSlide {
+
+    img {
+      height: 70vh;
+      width: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+  }
+
+}
