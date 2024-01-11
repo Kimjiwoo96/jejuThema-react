@@ -1,36 +1,37 @@
 .eventWrap{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     .innerDiv{
-        border:1px solid #f1f1f1;
-        border-radius: 10px;
         box-sizing: border-box;
-        width: 20%;
-        margin-right: 20px;
         padding: 20px;
         text-align: center;
+
 
         &:last-of-type{
             margin-right: 0;
         }
 
-        >p{
-            text-align: left;
-            span{
-                border:2px solid #0675c1;
-                box-sizing: border-box;
-                padding: 5px 8px;
-                border-radius: 15px;
-                color: #0675c1;
-                font-weight: 700;
+
+        div{
+            border-radius: 20px;
+        .eventdiv{
+            min-height: 4rem;
+            p{
+                text-align: left;
+                margin-top: 20px;
+                span{
+                    border:2px solid #0675c1;
+                    box-sizing: border-box;
+                    padding: 5px 8px;
+                    border-radius: 15px;
+                    color: #0675c1;
+                    font-weight: 700;
+                   
+                }
             }
+        }
         }
 
     img{
         box-sizing: border-box;
-        width: 70%;
         height: auto;
         margin-top: 20px
     }
@@ -38,3 +39,36 @@
 
 
 };
+
+
+
+
+
+/* 반응형 */
+@media screen and (max-width: 768px) {
+    .eventWrap{    
+        .innerDiv{
+            box-sizing: border-box;
+            padding: 20px;
+            text-align: center;
+            margin-right: 0;
+            float: left;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: center;
+            
+
+            div{
+                .eventdiv{
+                    p{
+                        display: none;
+                        min-height: 3rem;
+                    }
+                }   
+            }            
+        }
+    };
+}
+
+

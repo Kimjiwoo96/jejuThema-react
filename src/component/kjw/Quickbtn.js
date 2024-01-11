@@ -5,8 +5,6 @@ import { Link } from "react-router-dom"
 
 function Quickbtn({quickText}) {
 
-    console.log("이게뭐야??",quickText)
-
     const [hoverText , setHoverText] = useState(false)
 
     return (

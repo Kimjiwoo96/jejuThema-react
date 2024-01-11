@@ -4,10 +4,13 @@ import Video_p from "./pages/Video_p";
 import Event_p from "./pages/Event_p";
 import Comment_p from "./pages/Comment_p";
 import Quickbtns from "./component/kjw/Quickbtn";
+import Attraction_p from "./pages/Attraction_p";
+import {Div} from "./js/CommonUi"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   // style
-  const QbtnFix = {position:"fixed",right:"30px",bottom:"30px",display:"flex", flexDirection:"column",alignItems:"flex-end"}
+  const QbtnFix = {position:"fixed",right:"30px",bottom:"30px",display:"flex", flexDirection:"column",alignItems:"flex-end",zIndex:"9999"}
   const toTop = {
     backgroundColor : "#059B84",
     marginTop:"10px",
@@ -23,17 +26,16 @@ function App() {
   }
 
 
-
   function handleScrollToTop(){
     window.scrollTo({
       top: 0,
-      behavior: 'smooth' // 부드럽게 스크롤
+      behavior: 'smooth'
     });
   }
 
-
   return (
-    <div id="wrap">
+    <>
+    <div className="wrap">
       <div style={QbtnFix}>
         <Quickbtns
           quickText={{
@@ -43,7 +45,6 @@ function App() {
             target:"_blank"
           }}
         ></Quickbtns>
-
       <Quickbtns
           quickText={{
             text: "신청하기",
@@ -55,8 +56,6 @@ function App() {
             handleScrollToTop()
           }}
         ></Quickbtns>
-
-
         <div
           style={toTop}
           onClick={() => {
@@ -66,14 +65,17 @@ function App() {
           <i style={toTopi} class="bi bi-arrow-up-short"></i>
         </div>
       </div>
+        <Festival_p commonData={festivalObj}></Festival_p>
+      </div>
+        <Attraction_p></Attraction_p>
+      <div className="wrap">
 
+        <Video_p></Video_p>
+        <Event_p></Event_p>
+        <Comment_p></Comment_p>
 
-      <Festival_p commonData={festivalObj}></Festival_p>
-
-      <Video_p></Video_p>
-      <Event_p></Event_p>
-      <Comment_p></Comment_p>
-    </div>
+      </div>
+    </>
   );
 }
 

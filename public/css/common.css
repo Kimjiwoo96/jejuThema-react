@@ -36,11 +36,12 @@
     box-sizing: border-box;
 }
 
-#wrap{
+.wrap {
     margin-bottom: 170px;
     max-width: 1280px;
     margin: 0 auto;
 }
+
 
 button{
     background: inherit ;
