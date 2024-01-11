@@ -5,7 +5,20 @@ $main_color3: #d48121;
 $contents_bg_color: #F8F8F8;
 $contents_border_color: #ECECEC;
 
-.banner {}
+
+.banner {
+
+  .btn {
+    bottom: 165px;
+    z-index: 10000;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+  }
+
+}
+
 
 
 .bannerSlide {
@@ -14,8 +27,33 @@ $contents_border_color: #ECECEC;
     width: 100%;
     display: block;
   }
-  
+
+  .content {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    line-height: 3;
+
+    & h2,
+    p {
+      color: $contents_bg_color;
+    }
+
+    h2 {
+      font-size: 90px;
+      letter-spacing: -6px;
+    }
+
+    p {
+      font-size: 35px;
+    }
+
+  }
 }
+
+
 
 
 // 모바일 버전
@@ -26,11 +64,23 @@ $contents_border_color: #ECECEC;
 
     img {
       height: 70vh;
-      width: auto;
+      // width: auto;
       display: block;
-      margin: 0 auto;
+      object-fit: cover;
     }
 
+  }
+
+  .content {
+    text-align: center;
+
+    h2 {
+      font-size: 45px !important;
+    }
+
+    p {
+      font-size: 20px !important;
+    }
   }
 
 }

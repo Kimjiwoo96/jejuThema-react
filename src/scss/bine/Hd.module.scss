@@ -36,9 +36,6 @@ $contents_border_color: #ECECEC;
       height: auto;
     }
 
-    .toggle {
-      border: 0;
-    }
   }
 }
 
@@ -71,20 +68,25 @@ $contents_border_color: #ECECEC;
         color: $main_color3;
       }
 
-      &::after {
-        content: "";
-        position: absolute;
-        background-color: $main_color3;
-        height: 3px;
-        width: 0;
-        left: 0;
-        bottom: 30px;
-        transition: .3s;
+      @media (min-width:991px) {
+        &::after {
+          content: "";
+          position: absolute;
+          background-color: $main_color3;
+          height: 3px;
+          width: 0;
+          left: 0;
+          bottom: 30px;
+          transition: .3s;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+
       }
 
-      &:hover::after {
-        width: 100%;
-      }
+
     }
   }
 }

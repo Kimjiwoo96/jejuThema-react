@@ -32,6 +32,19 @@
   padding: 0;
 }
 
+/* 토글 */
+:focus-visible,
+:focus {
+  outline: none !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+
+
+
 li {
   list-style: none;
 }
@@ -48,12 +61,12 @@ li {
   text-decoration: none;
 }
 
-
+/* 
 #hd .navbar {
   padding: 0;
-}
+} */
 
-.logo img {
+/* .logo img {
   max-width: 100%;
   height: auto;
 }
@@ -81,7 +94,7 @@ li {
   position: relative;
   font-family: 'GmarketSansMedium' !important;
   font-size: 20px;
-  /* padding: 0 10px; */
+  padding: 0 10px;
   text-decoration: none;
   color: var(--main-font-color);
   display: block;
@@ -108,8 +121,13 @@ li {
 #gnbs a:hover::after {
   width: 100%;
 }
+ */
 
-button.navbar-toggler {
+/* button.navbar-toggler {
   border: 0;
-}
+} */
+
+
+/* 슬라이드 */
+
 
