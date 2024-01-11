@@ -37,9 +37,9 @@ function Main() {
 
       >
         {
-          bannerObj.map((el, idx) => {
+          bannerObj.map((el) => {
             return (
-              <SwiperSlide className={MainStyle.bannerSlide} key={idx}>
+              <SwiperSlide className={MainStyle.bannerSlide} key={el.id}>
                 <div>
                   <img src={el.image} alt={el.title} />
                   <div className={`${MainStyle.content} position-absolute container `}>
@@ -51,9 +51,9 @@ function Main() {
             )
           })
         }
-        <div className={`${MainStyle.btn} position-absolute container d-flex`}>
-          <div className='pagination'></div>
-          <button className='button-prev-slide'><BsChevronLeft /></button>
+        <div className={`${MainStyle.btn}  position-absolute container d-flex`}>
+          <div className="pagination"></div>
+          <button className='button-prev-slide btn-light'><BsChevronLeft /></button>
           <button className='button-next-slide'><BsChevronRight /></button>
         </div>
 

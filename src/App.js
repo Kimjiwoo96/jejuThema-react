@@ -8,7 +8,9 @@ function App() {
   return (
     <>
       <Hd></Hd>
+      <div id='slidebanner'>
         <MainBanner></MainBanner>
+      </div>
     </>
   );
 }

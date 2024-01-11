@@ -61,73 +61,60 @@ li {
   text-decoration: none;
 }
 
-/* 
-#hd .navbar {
-  padding: 0;
-} */
-
-/* .logo img {
-  max-width: 100%;
-  height: auto;
-}
-
-
-#gnbs {
-  width: 650px;
-  padding: 0;
-  margin: 0;
-  flex-wrap: wrap;
-
-}
-
-#gnbs li {
-  padding: 0 1rem;
-}
-
-#gnbs li:last-child {
-  padding-right: 0;
-}
-
-#gnbs a {
-
-  line-height: 100px;
-  position: relative;
-  font-family: 'GmarketSansMedium' !important;
-  font-size: 20px;
-  padding: 0 10px;
-  text-decoration: none;
-  color: var(--main-font-color);
-  display: block;
-  padding: 0;
-
-}
-
-#gnbs a:hover {
-  color: var(--main_color3);
-}
-
-#gnbs a::after {
-  content: "";
-  position: absolute;
-  background-color: var(--main_color3);
-  height: 3px;
-  width: 0;
-  left: 0;
-  bottom: 30px;
-  transition: .3s;
-
-}
-
-#gnbs a:hover::after {
-  width: 100%;
-}
- */
-
-/* button.navbar-toggler {
-  border: 0;
-} */
-
 
 /* 슬라이드 */
 
 
+#slidebanner .pagination {
+  align-items: center;
+  margin-right: 1rem;
+}
+
+#slidebanner .pagination .swiper-pagination-bullet {
+  border-radius: 0;
+  width: 50px;
+  margin: 0;
+  position: relative;
+  height: 10px;
+  opacity: 1;
+  background-color: transparent;
+}
+
+#slidebanner .pagination .swiper-pagination-bullet::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  background-color: var(--contents_bg_color);
+}
+
+#slidebanner .swiper-pagination-bullet-active {
+  background-color: transparent !important;
+}
+
+#slidebanner .swiper-pagination-bullet-active::before {
+  height: 3px !important;
+}
+
+#slidebanner button.button-next-slide,
+#slidebanner button.button-prev-slide {
+  height: auto;
+  width: auto;
+  margin: 0;
+  padding: 4px 12px;
+  align-items: center;
+  display: flex;
+}
+
+#slidebanner button.button-next-slide::before,
+#slidebanner button.utton-prev-slide::before {
+  content: "";
+  color: var(--contents_bg_color);
+  font-size: 18px;
+  z-index: 10000;
+}
