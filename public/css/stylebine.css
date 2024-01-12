@@ -68,6 +68,7 @@ li {
 #slidebanner .pagination {
   align-items: center;
   margin-right: 1rem;
+  width: auto;
 }
 
 #slidebanner .pagination .swiper-pagination-bullet {
@@ -106,7 +107,7 @@ li {
   height: auto;
   width: auto;
   margin: 0;
-  padding: 4px 12px;
+  padding: 4px 8px;
   align-items: center;
   display: flex;
 }

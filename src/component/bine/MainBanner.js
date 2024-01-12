@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { bannerObj } from '../../js/banner';
 import MainStyle from '../../scss/bine/Main.module.scss';
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import Apply from './Apply';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -16,7 +17,7 @@ function Main() {
     <div className={MainStyle.banner} >
 
       <Swiper
-        className='position-relative'
+        className='position-relative h-100'
         modules={[Navigation, Pagination, Autoplay]}
         autoplay={{
           delay: 4000,
@@ -40,9 +41,11 @@ function Main() {
           bannerObj.map((el) => {
             return (
               <SwiperSlide className={MainStyle.bannerSlide} key={el.id}>
-                <div>
-                  <img src={el.image} alt={el.title} />
-                  <div className={`${MainStyle.content} position-absolute container `}>
+                <div className={MainStyle.bgcontent} style={{
+                  backgroundImage: `url(${el.image}) `
+
+                }}>
+                  <div className={`${MainStyle.content} position-absolute container mx-auto text-center text-lg-start`}>
                     <h2>{el.title}</h2>
                     <p>{el.txt}</p>
                   </div>
@@ -51,15 +54,17 @@ function Main() {
             )
           })
         }
-        <div className={`${MainStyle.btn}  position-absolute container d-flex`}>
+        <div className={`${MainStyle.btn} position-absolute container d-flex`}>
           <div className="pagination"></div>
-          <button className='button-prev-slide btn-light'><BsChevronLeft /></button>
-          <button className='button-next-slide'><BsChevronRight /></button>
+          <div className='d-lg-flex  d-none'>
+            <button className='button-prev-slide btn-light'><BsChevronLeft /></button>
+            <button className='button-next-slide'><BsChevronRight /></button>
+          </div>
         </div>
 
       </Swiper>
 
-
+      <Apply />
 
     </div>
   )

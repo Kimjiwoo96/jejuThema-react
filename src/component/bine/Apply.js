@@ -1,0 +1,65 @@
+import React from 'react'
+import { useForm } from 'react-hook-form'
+import styled from 'styled-components';
+import ApplyStyle from '../../scss/bine/Apply.module.scss'
+
+
+const ApplyForm = styled.form`
+
+`;
+
+
+function Apply() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm()
+
+  const onSubmit = (data) => console.log(data)
+
+  return (
+    <div className={`${ApplyStyle.apply}`}>
+      <div className=''>
+        <div className=''>
+          <ApplyForm onSubmit={handleSubmit(onSubmit)}>
+            <h2>신청하기</h2>
+            <p>
+              정보를 입력해주시면 추첨을 통해서<br />
+              <strong>제주항공권 + 렌트카 or 숙소 할인쿠폰</strong>을 드립니다.
+            </p>
+
+            <div>
+              <label htmlFor="name">이름</label>
+              <input name='name' type='text' placeholder='이름을 입력하세요.' {...register("name", { required: true })} />
+              {errors.name && <span>이름을 입력하세요.</span>}
+            </div>
+
+            <div>
+              <label htmlFor="phone">연락처</label>
+              <input name='phone' type='number' placeholder='연락처를 입력하세요.' {...register("phone", { required: true })} />
+              {errors.phone && <span>연락처를 입력하세요.</span>}
+            </div>
+
+            <div>
+              <label htmlFor="email">이메일</label>
+              <input name='email' type='email' placeholder='이메일을 입력하세요.' {...register("email", { required: true })} />
+              {errors.email && <span>이메일을 입력하세요.</span>}
+            </div>
+
+            <div>
+              <label>
+                <input type="checkbox" {...register("agreement", { required: true })} /> 개인정보수집 이용 동의
+              </label>
+              {errors.agreement && <span>동의가 필요합니다.</span>}
+            </div>
+
+            <button type="submit">신청하기</button>
+          </ApplyForm>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Apply;

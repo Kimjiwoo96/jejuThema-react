@@ -7,6 +7,14 @@ $contents_border_color: #ECECEC;
 
 
 .banner {
+  height: 100vw;
+
+
+  @media (min-width:1280px) {
+    max-height: 680px;
+
+
+  }
 
   .btn {
     bottom: 165px;
@@ -15,15 +23,42 @@ $contents_border_color: #ECECEC;
     right: 0;
     margin: 0 auto;
 
+    @media (max-width:1279px) {
+      bottom: 10vw;
+    }
+
+    @media (max-width:991px) {
+
+      justify-content: center;
+    }
+
+
+    svg {
+      path {
+        fill: white !important;
+      }
+    }
+
   }
 }
 
 
+
 .bannerSlide {
-  img {
-    height: auto;
-    width: 100%;
-    display: block;
+  height: 100%;
+
+  .bgcontent {
+    height: 100%;
+    background-repeat: no-repeat;
+    // background-size: 100% auto !important;
+    background-position: center;
+
+    @media (max-width:1280px) {
+
+      background-size: auto 100% !important;
+
+
+    }
   }
 
   .content {
@@ -31,10 +66,14 @@ $contents_border_color: #ECECEC;
     transform: translateY(-50%);
     left: 0;
     right: 0;
-    margin: 0 auto;
     line-height: 3;
 
-    & h2,
+    @media (max-width:1280px) {
+      line-height: 2.5;
+
+    }
+
+    h2,
     p {
       color: $contents_bg_color;
     }
@@ -42,10 +81,20 @@ $contents_border_color: #ECECEC;
     h2 {
       font-size: 90px;
       letter-spacing: -6px;
+
+      @media (max-width:1280px) {
+        font-size: 6vw;
+        letter-spacing: 0;
+
+      }
     }
 
     p {
       font-size: 35px;
+
+      @media (max-width:1280px) {
+        font-size: 3vw;
+      }
     }
 
   }
@@ -55,32 +104,26 @@ $contents_border_color: #ECECEC;
 
 
 
+// .bannerSlide {
 
-// 모바일 버전
-@media screen and (max-width: 768px) {
-  .banner {}
+//   img {
+//     height: 70vh;
+//     // width: auto;
+//     display: block;
+//     object-fit: cover;
+//   }
 
-  .bannerSlide {
+// }
 
-    img {
-      height: 70vh;
-      // width: auto;
-      display: block;
-      object-fit: cover;
-    }
+// .content {
+//   text-align: center;
 
-  }
 
-  .content {
-    text-align: center;
+//   h2 {
+//     font-size: 45px !important;
+//   }
 
-    h2 {
-      font-size: 45px !important;
-    }
-
-    p {
-      font-size: 20px !important;
-    }
-  }
-
-}
+//   p {
+//     font-size: 20px !important;
+//   }
+// }

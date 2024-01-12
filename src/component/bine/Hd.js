@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
 import { naviObj } from '../../js/menu';
 import HdStyle from '../../scss/bine/Hd.module.scss';
 
@@ -11,8 +11,8 @@ function Hd() {
         <a href="https://www.jeju.go.kr/booking/index.htm" target="_blank" rel="noopener noreferrer">통합 예약</a>
       </div>
       <Navbar expand="lg">
-        <Container>
-          <Navbar.Brand href="#home" className='logo'>
+        <div className='container-xl'>
+          <Navbar.Brand href="#home" className={`${HdStyle.logo} ms-3 ms-lg-0`}>
             <img src="/img/logo.png" alt="제주테마여행" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" className='border-0' />
@@ -20,7 +20,7 @@ function Hd() {
             <Nav className={`${HdStyle.gnbs}`}>
               {
                 naviObj.map((el, idx) => (
-                  <Nav.Item as="li" key={idx}>
+                  <Nav.Item as="li" className={idx < (naviObj.length - 1) ? `px-lg-3` : 'ps-lg-3'} key={idx}>
                     <Nav.Link href={el.href}>
                       {el.title}
                     </Nav.Link>
@@ -29,7 +29,7 @@ function Hd() {
               }
             </Nav>
           </Navbar.Collapse>
-        </Container>
+        </div>
       </Navbar>
     </header>
   );

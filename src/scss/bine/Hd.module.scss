@@ -16,6 +16,18 @@ $contents_border_color: #ECECEC;
 
 
 .hd {
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: white;
+
+  @media (min-width:991px) { //991 이상일때
+    position: unset;
+
+  }
+
   .minibanner {
     background-color: $main_color1;
     font-weight: 400;
@@ -31,11 +43,16 @@ $contents_border_color: #ECECEC;
   .navbar {
     padding: 0;
 
-    .logo img {
-      max-width: 100%;
-      height: auto;
-    }
 
+
+  }
+}
+
+.logo {
+  img {
+    max-width: 218px;
+    width: 30vw;
+    height: auto;
   }
 }
 
@@ -48,14 +65,14 @@ $contents_border_color: #ECECEC;
   flex-wrap: wrap;
 
   li {
-    padding: 0 1rem;
+
 
     &:last-child {
       padding-right: 0;
     }
 
     a {
-      line-height: 100px;
+
       position: relative;
       font-family: 'GmarketSansMedium' !important;
       font-size: 20px;
@@ -63,12 +80,16 @@ $contents_border_color: #ECECEC;
       color: $main_font_color;
       display: block;
       padding: 0;
+      line-height: 3;
 
       &:hover {
         color: $main_color3;
       }
 
       @media (min-width:991px) {
+
+        line-height: 100px;
+
         &::after {
           content: "";
           position: absolute;
