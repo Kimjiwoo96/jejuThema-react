@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { bannerObj } from '../../js/banner';
 import MainStyle from '../../scss/bine/Main.module.scss';
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
-import Apply from './Apply';
+// import Apply from './Apply';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -56,15 +56,15 @@ function Main() {
         }
         <div className={`${MainStyle.btn} position-absolute container d-flex`}>
           <div className="pagination"></div>
-          <div className='d-lg-flex  d-none'>
-            <button className='button-prev-slide btn-light'><BsChevronLeft /></button>
+          <div className='d-lg-flex d-none'>
+            <button className='button-prev-slide'><BsChevronLeft /></button>
             <button className='button-next-slide'><BsChevronRight /></button>
           </div>
         </div>
 
       </Swiper>
 
-      <Apply />
+      {/* <Apply /> */}
 
     </div>
   )

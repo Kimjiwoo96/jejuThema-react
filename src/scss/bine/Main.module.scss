@@ -23,7 +23,7 @@ $contents_border_color: #ECECEC;
     right: 0;
     margin: 0 auto;
 
-    @media (max-width:1279px) {
+    @media (max-width:1280px) {
       bottom: 10vw;
     }
 
@@ -99,31 +99,3 @@ $contents_border_color: #ECECEC;
 
   }
 }
-
-
-
-
-
-// .bannerSlide {
-
-//   img {
-//     height: 70vh;
-//     // width: auto;
-//     display: block;
-//     object-fit: cover;
-//   }
-
-// }
-
-// .content {
-//   text-align: center;
-
-
-//   h2 {
-//     font-size: 45px !important;
-//   }
-
-//   p {
-//     font-size: 20px !important;
-//   }
-// }
