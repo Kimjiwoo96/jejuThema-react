@@ -5,7 +5,8 @@ import Event_p from "./pages/Event_p";
 import Comment_p from "./pages/Comment_p";
 import Quickbtns from "./component/kjw/Quickbtn";
 import Attraction_p from "./pages/Attraction_p";
-import {Div} from "./js/CommonUi"
+import Tour_p from "./pages/Tour_p";
+import Footer from "./pages/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -72,9 +73,15 @@ function App() {
 
         <Video_p></Video_p>
         <Event_p></Event_p>
-        <Comment_p></Comment_p>
-
       </div>
+
+      <Tour_p></Tour_p>
+
+      <div className="wrap">
+        <Comment_p></Comment_p>
+      </div>
+
+      <Footer></Footer>
     </>
   );
 }

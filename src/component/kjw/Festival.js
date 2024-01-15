@@ -15,7 +15,7 @@ function Festival(commonData){
                             <div key={`festival${idx}`}>
                                 <img src={el.img} alt={`Festival ${idx}`}/>
                                 <div>
-                                    <h3>{el.festivalNm}</h3>
+                                    <h4>{el.festivalNm}</h4>
                                     <p>{el.festivalCon}</p>              
                                     <span>{el.festivalDate}</span> ~ <span>{el.festivalTo}</span>
                                 </div>

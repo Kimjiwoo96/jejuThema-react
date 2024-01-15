@@ -144,3 +144,67 @@ export const attraction = [
 ];
 
 
+
+
+export const tour = [
+    {
+        올레 :[
+            {
+                title: "월평마을 아왜낭묵",
+                subTitle : "마을 안의 송이 슈퍼",
+                img:"/img/tour/olle/Wolpyeong.png"
+            },
+            {
+                title: "월평포구",
+                subTitle : "달빛을 품은 작은 포구",
+                img:"/img/tour/olle/WolpyeongPort.png"
+            }, 
+            {
+                title: "올레요7쉼터",
+                subTitle : "제주서귀포 올레길7코스(서건도)앞에 위치한 쉼터",
+                img:"/img/tour/olle/SeventyRi.png"
+            }, 
+            { 
+                title: "법환포구",
+                subTitle : "최영 장군이 막사를 쳤던 포구",
+                img:"/img/tour/olle/BeophwanPort.png"
+            }, 
+            { 
+                title: "외돌개",
+                subTitle : "바다위에 홀로 우뚝, 우직한 외돌개",
+                img:"/img/tour/olle/singleStone.png"
+            }, 
+            { 
+                title: "칠십리시공원",
+                subTitle : "외돌개와 해안올레길을 연결하는 공원",
+                img:"/img/tour/olle/SeventyRi.png"
+            }
+        ]
+    },
+    {
+        드라이브 :[
+            {
+                title: "애월해안도로",
+                subTitle : "도보, 자전거, 자동차 뭐든 좋은 서부해안도로",
+                img:"/img/tour/drive/AewolBeach.png"
+            },
+            {
+                title: "구엄리돌염전",
+                subTitle : "300여 년의 세월이  담긴 구엄리 소금밭",
+                img:"/img/tour/drive/GureumRi.png"
+            }, 
+            {
+                title: "애월항",
+                subTitle : "구불구불 해안길",
+                img:"/img/tour/drive/Aewol.png"
+            }, 
+            { 
+                title: "협재해수욕장",
+                subTitle : "비양도, 은모래, 바다가 그려낸 그림같이 아름다운 해변",
+                img:"/img/tour/drive/HyeopjaeBeach.png"
+            }
+        ]
+    }
+]
+
+

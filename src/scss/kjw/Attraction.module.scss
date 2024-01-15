@@ -51,6 +51,8 @@
                         margin-top: 10px;
                         position: absolute;
                         bottom: 20px;
+                        margin-left: 0;
+                        padding-left:0;
         
             
                         li{
@@ -97,7 +99,9 @@
                         height: 100%;
                         opacity: 1;
                         background-color: #00000076;
-                        transition: all ease 0.2s;               
+                        transition: all ease 0.2s;         
+                        
+                        
                     }
 
                 }

@@ -15,9 +15,9 @@ function Attraction_p() {
     const breakpoints = {
         0: {
           slidesPerView: 2,
-          spaceBetween: -100,
+          spaceBetween: -50,
         },
-        980: {
+        900: {
           slidesPerView: 3,
           spaceBetween: 100,
         },

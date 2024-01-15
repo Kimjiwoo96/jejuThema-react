@@ -4,8 +4,8 @@ function Maintext(MText){
 
     return(
        <div id="mainTitle" style={center}>
-            <h1>{MText.title}</h1>
-            <h4>{MText.subTitle}</h4>
+            <h2>{MText.title}</h2>
+            <h5>{MText.subTitle}</h5>
        </div>
     );
 }
