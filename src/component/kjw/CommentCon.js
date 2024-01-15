@@ -12,7 +12,7 @@ function CommentCon({commentdata}) {
     function commentDelet(e){
         let clickComment = e.target.parentNode.parentNode.parentNode;
 
-        if(confirm("댓글을 삭제하시겠습니까??")){
+        if(window.confirm("댓글을 삭제하시겠습니까??")){
             clickComment.remove();
             alert("댓글이 삭제되었습니다.")
         };

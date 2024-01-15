@@ -12,7 +12,7 @@ function Comment(){
     const commentRegistration = (e) => {
         e.preventDefault()
 
-        if(confirm("댓글을 등록하시겠습니까?")){
+        if(window.confirm("댓글을 등록하시겠습니까?")){
             setCommentdata((prev) => [{ nicknameValue, commentConText }, ...prev])
             alert("댓글이 등록되었습니다")
         };
