@@ -11,10 +11,13 @@ function Comment(){
 
     const commentRegistration = (e) => {
         e.preventDefault()
-        setCommentdata((prev) => [{ nicknameValue, commentConText }, ...prev])
-        alert("댓글이 등록되었습니다")
 
-        console.log("이것을 DB로 넘겨야함", commentdata)
+        if(confirm("댓글을 등록하시겠습니까?")){
+            setCommentdata((prev) => [{ nicknameValue, commentConText }, ...prev])
+            alert("댓글이 등록되었습니다")
+        };
+        
+        // console.log("이것을 DB로 넘겨야함", commentdata)
     }
 
 

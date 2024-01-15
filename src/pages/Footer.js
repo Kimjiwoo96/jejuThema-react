@@ -21,10 +21,10 @@ function Footer() {
 
             <div className={styleFooter.con2}>
                 <ul className={`${styleFooter.icons} d-flex justify-content-lg-end justify-content-center`}>
-                    <li><a href=""><i class="bi bi-facebook"></i></a></li>
-                    <li><a href=""><i class="bi bi-youtube"></i></a></li>
-                    <li><a href=""><i class="bi bi-instagram"></i></a></li>
-                    <li><a href=""><i class="bi bi-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/happyjejudo" target='_blank'><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="https://www.youtube.com/user/happyjejudo/video" target='_blank'><i class="bi bi-youtube"></i></a></li>
+                    <li><a href="https://www.instagram.com/special_jejudo/" target='_blank'><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fhappyjejudo" target='_blank'><i class="bi bi-twitter"></i></a></li>
                 </ul>
 
                 <ul className={`${styleFooter.list} d-lg-flex justify-content-end d-none`}>

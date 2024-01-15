@@ -9,7 +9,14 @@ function CommentCon({commentdata}) {
     var day = ('0' + today.getDate()).slice(-2);
     var dateString = year + '-' + month  + '-' + day;
 
-    console.log("??",typeof commentdata)
+    function commentDelet(e){
+        let clickComment = e.target.parentNode.parentNode.parentNode;
+
+        if(confirm("댓글을 삭제하시겠습니까??")){
+            clickComment.remove();
+            alert("댓글이 삭제되었습니다.")
+        };
+    }
 
     return (
         <>
@@ -23,7 +30,12 @@ function CommentCon({commentdata}) {
                                     <p className={CommentConStyle.userId}>{el.nicknameValue}</p>
                                     <span className={CommentConStyle.commentDate}>{dateString}</span>
                                 </section>
-                                <span className={CommentConStyle.delBtn}>삭제</span>
+                                <span
+                                    className={CommentConStyle.delBtn}
+                                    onClick={(e) => {
+                                        commentDelet(e)
+                                    }}
+                                >삭제</span>
                             </div>
                             <div className={CommentConStyle.commentCons}>
                                 <p className="content">{el.commentConText}</p>
@@ -32,6 +44,9 @@ function CommentCon({commentdata}) {
                     </div> 
                 )) 
              }
+
+
+
 
 
                 <div className={CommentConStyle.commentCon}>
@@ -50,6 +65,10 @@ function CommentCon({commentdata}) {
                 </div> 
 
         </> 
+
+
+
+
     )
 }
 
