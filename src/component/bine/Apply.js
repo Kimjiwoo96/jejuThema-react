@@ -31,14 +31,14 @@ function Apply() {
   const onSubmit = (data) => console.log(data)
 
   return (
-    <div className={`${ApplyStyle.apply} position-absolute`}>
-      <div className='container text-end'>
+    <div className={`${ApplyStyle.apply} `}>
+      <div className='container text-center text-lg-end'>
         <div className={`${ApplyStyle.wrap} position-relative d-inline-block text-start`}>
           <form onSubmit={handleSubmit(onSubmit)}>
             <h2>신청하기</h2>
             <p className='position-absolute'>
               정보를 입력해주시면 추첨을 통해서<br />
-              <strong>제주항공권 + 렌트카 or 숙소 할인쿠폰</strong>을 드립니다.
+              제주항공권 + 렌트카 or 숙소 <strong>할인쿠폰</strong>을 드립니다.
             </p>
 
             <div className={ApplyStyle.box}>
@@ -66,7 +66,7 @@ function Apply() {
               {errors.agreement && <span>동의가 필요합니다.</span>}
             </div>
 
-            <StyledButton type="submit">신청하기</StyledButton>
+            <StyledButton type="submit">보내기</StyledButton>
           </form>
         </div>
       </div>

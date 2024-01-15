@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { bannerObj } from '../../js/banner';
 import MainStyle from '../../scss/bine/Main.module.scss';
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
-// import Apply from './Apply';
+import Apply from './Apply';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -64,7 +64,7 @@ function Main() {
 
       </Swiper>
 
-      {/* <Apply /> */}
+      <Apply />
 
     </div>
   )
