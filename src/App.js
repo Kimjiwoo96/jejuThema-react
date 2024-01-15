@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-//bine 작업
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Hd from "./component/bine/Hd";
-import MainBanner from "./component/bine/MainBanner";
-
-=======
 import { festivalObj } from "./js/commonData";
 import Festival_p from "./pages/Festival_p";
 import Video_p from "./pages/Video_p";
@@ -14,28 +7,31 @@ import Quickbtns from "./component/kjw/Quickbtn";
 import Attraction_p from "./pages/Attraction_p";
 import Tour_p from "./pages/Tour_p";
 import Footer from "./pages/Footer";
+import Hd from "./component/bine/Hd";
+import MainBanner from "./component/bine/MainBanner";
+// css
 import 'bootstrap/dist/css/bootstrap.min.css';
->>>>>>> 27a89e4667711e671e43d0e569c1d0a558c2d159
+
 
 function App() {
   // style
-  const QbtnFix = {position:"fixed",right:"30px",bottom:"30px",display:"flex", flexDirection:"column",alignItems:"flex-end",zIndex:"9999"}
+  const QbtnFix = { position: "fixed", right: "30px", bottom: "30px", display: "flex", flexDirection: "column", alignItems: "flex-end", zIndex: "9999" }
   const toTop = {
-    backgroundColor : "#059B84",
-    marginTop:"10px",
-    width:"3.4rem",
-    height:"3.4rem",
-    textAlign:"center",
-    borderRadius:"50%",
-    cursor:"pointer"
+    backgroundColor: "#059B84",
+    marginTop: "10px",
+    width: "3.4rem",
+    height: "3.4rem",
+    textAlign: "center",
+    borderRadius: "50%",
+    cursor: "pointer"
   }
   const toTopi = {
-   color:"#fff",
-   fontSize:"33px",
+    color: "#fff",
+    fontSize: "33px",
   }
 
 
-  function handleScrollToTop(){
+  function handleScrollToTop() {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
@@ -44,45 +40,45 @@ function App() {
 
   return (
     <>
-<<<<<<< HEAD
+
       <Hd></Hd>
       <div id='slidebanner'>
         <MainBanner></MainBanner>
       </div>
-=======
-    <div className="wrap">
-      <div style={QbtnFix}>
-        <Quickbtns
-          quickText={{
-            text: "대중교통",
-            icons: "bi bi-bus-front",
-            href:"http://bus.jeju.go.kr/",
-            target:"_blank"
-          }}
-        ></Quickbtns>
-      <Quickbtns
-          quickText={{
-            text: "신청하기",
-            icons: "bi bi-check2-square",
-            href:"#applyform",
-            target:""
-          }}
-          onClick={() => {
-            handleScrollToTop()
-          }}
-        ></Quickbtns>
-        <div
-          style={toTop}
-          onClick={() => {
-            handleScrollToTop()
-          }}
-        >
-          <i style={toTopi} class="bi bi-arrow-up-short"></i>
+
+      <div className="wrap">
+        <div style={QbtnFix}>
+          <Quickbtns
+            quickText={{
+              text: "대중교통",
+              icons: "bi bi-bus-front",
+              href: "http://bus.jeju.go.kr/",
+              target: "_blank"
+            }}
+          ></Quickbtns>
+          <Quickbtns
+            quickText={{
+              text: "신청하기",
+              icons: "bi bi-check2-square",
+              href: "#applyform",
+              target: ""
+            }}
+            onClick={() => {
+              handleScrollToTop()
+            }}
+          ></Quickbtns>
+          <div
+            style={toTop}
+            onClick={() => {
+              handleScrollToTop()
+            }}
+          >
+            <i style={toTopi} class="bi bi-arrow-up-short"></i>
+          </div>
         </div>
-      </div>
         <Festival_p commonData={festivalObj}></Festival_p>
       </div>
-        <Attraction_p></Attraction_p>
+      <Attraction_p></Attraction_p>
       <div className="wrap">
 
         <Video_p></Video_p>
@@ -96,7 +92,7 @@ function App() {
       </div>
 
       <Footer></Footer>
->>>>>>> 27a89e4667711e671e43d0e569c1d0a558c2d159
+
     </>
   );
 }
