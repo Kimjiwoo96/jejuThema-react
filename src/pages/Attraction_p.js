@@ -13,12 +13,12 @@ import {Div} from "../js/CommonUi"
 function Attraction_p() { 
 
     const breakpoints = {
-        0: {
-          slidesPerView: 2,
+        320: {
+          slidesPerView: 1.5,
           spaceBetween: -50,
         },
-        900: {
-          slidesPerView: 3,
+        768: {
+          slidesPerView: 2.5,
           spaceBetween: 100,
         },
         1320: {

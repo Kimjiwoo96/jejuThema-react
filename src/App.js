@@ -78,21 +78,22 @@ function App() {
         </div>
         <Festival_p commonData={festivalObj}></Festival_p>
       </div>
-      <div className="d-none">
+      
         <Attraction_p></Attraction_p>
-        <div className="wrap ">
+        <div className="d-none">
+          <div className="wrap ">
 
-          <Video_p></Video_p>
-          <Event_p></Event_p>
+            <Video_p></Video_p>
+            <Event_p></Event_p>
+          </div>
+
+          <Tour_p></Tour_p>
         </div>
-
-        <Tour_p></Tour_p>
-
         <div className="wrap ">
           <Comment_p></Comment_p>
         </div>
-      </div>
-      
+     
+
       <Footer></Footer>
 
     </>
