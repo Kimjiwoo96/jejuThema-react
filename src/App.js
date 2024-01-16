@@ -80,7 +80,7 @@ function App() {
       </div>
       
         <Attraction_p></Attraction_p>
-        <div className="d-none">
+        {/* <div className="d-none"> */}
           <div className="wrap ">
 
             <Video_p></Video_p>
@@ -88,7 +88,7 @@ function App() {
           </div>
 
           <Tour_p></Tour_p>
-        </div>
+        {/* </div> */}
         <div className="wrap ">
           <Comment_p></Comment_p>
         </div>
