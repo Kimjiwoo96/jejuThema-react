@@ -13,19 +13,43 @@
 
             div{
                 box-sizing: border-box;
-                height: 390px;
-                border-radius: 20px;
+                
+                
 
                 section{
+                    border-radius: 20px;
                     box-sizing: border-box;
                     padding: 30px;
                     width: 100%;
-                    height: 100%;
-                    opacity: 0;
-                    background-color: #00000076;
-                    transition: all ease 0.2s;
+                    height: 390px; 
+                    position: relative; 
+                    overflow: hidden;                
+                  
+                    
+                   
+
+                    * {
+                        opacity: 0;
+                        transition: all ease 0.2s;
+                        position: relative;
+                     }
 
                     &:hover {
+                        *{
+                            opacity: 1;
+                        }
+                    }
+                    &:before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        left:0; right:0; top:0; bottom:0;
+                        background-color: #00000076;
+                        opacity: 0;
+                        transition: all ease 0.2s;
+                    }
+
+                    &:hover:before {
                         opacity: 1;
                     }
 
@@ -72,6 +96,18 @@
     }
 }
 
+// .swiper-slide {
+//     transition: 0.5s;
+// }
+
+.swiperSlide{
+    margin-top: 0rem;
+    transition: margin-top 2s;
+    &:nth-child(2n){
+        margin-top: 10rem;
+    }
+}
+
 
 /* 반응형 */
 @media screen and (max-width: 850px) {
@@ -79,18 +115,14 @@
 
         .attractionWrap{
     
-            border-radius: 20px;
-            box-sizing: border-box;
-            overflow: hidden;
-            width: 320px;
-            position: relative;
+         
         
             div.con{
     
                 div{
-                    box-sizing: border-box;
-                    height: 390px;
-                    border-radius: 20px;
+                   
+                   
+                  
     
                     section{
                         box-sizing: border-box;
@@ -99,7 +131,24 @@
                         height: 100%;
                         opacity: 1;
                         background-color: #00000076;
-                        transition: all ease 0.2s;         
+                        transition: all ease 0.2s; 
+                        position: relative;  
+                     
+                        > * {
+                            position: relative;
+                            opacity: 1;
+                        }
+                        &:before{
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            left:0; top:0; bottom:0;
+                            right:0;
+                            background-color: rgba(0,0,0,.5);
+                            opacity: 1;
+
+
+                        }      
                         
                         
                     }

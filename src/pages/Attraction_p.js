@@ -29,7 +29,7 @@ function Attraction_p() {
                 delay: 3000,
                 disableOnInteraction : false
             }}
-            centeredSlides={true}
+            // centeredSlides={true}
             spaceBetween={30}
             slidesPerView={'auto'}
             // breakpoints={breakpoints}
@@ -37,26 +37,32 @@ function Attraction_p() {
         >
         {
             attraction.map((el,idx) => {
+             
                 return(
-                    <SwiperSlide key={idx}>
+                    <SwiperSlide key={idx} className={`w-auto ${ AttractionStyle.swiperSlide }`}>
                         <div className={AttractionStyle.attractionWrap}> 
                             <div className={AttractionStyle.con}>
                                 <div
-                                     style={{
+                                    
+                                >
+                                    <section  style={{
                                         backgroundImage:`url(${el.img})`,
                                         backgroundRepeat:"none",
-                                        backgroundSize:"cover"
-                                    }}
-                                >
-                                    <section>
+                                        backgroundSize:"cover",
+                                        height: "390px"
+                                    }}>
                                         <h2>{el.title}</h2>
                                         <p>{el.txt}</p>
                                         <span>{el.Location}</span>
+                                   
 
                                         
                                     </section>
                                     <ul
-                                            className={AttractionStyle.hash}
+                                            className={`${AttractionStyle.hash} 
+                                            d-flex flex-wrap justify-content-center
+                                            text-dark mt-2 mx-0 p-0
+                                            `}
                                         >
                                             <li>{el.hashTag[0]}</li>
                                             <li>{el.hashTag[1]}</li>
