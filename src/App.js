@@ -40,13 +40,13 @@ function App() {
 
   return (
     <>
-
       <Hd></Hd>
       <div id='slidebanner'>
-        <MainBanner></MainBanner>
+        <MainBanner className="position-relative"></MainBanner>
       </div>
+<div className="d-none">
 
-      <div className="wrap">
+      <div className="wrap ">
         <div style={QbtnFix}>
           <Quickbtns
             quickText={{
@@ -79,7 +79,7 @@ function App() {
         <Festival_p commonData={festivalObj}></Festival_p>
       </div>
       <Attraction_p></Attraction_p>
-      <div className="wrap">
+      <div className="wrap ">
 
         <Video_p></Video_p>
         <Event_p></Event_p>
@@ -87,12 +87,12 @@ function App() {
 
       <Tour_p></Tour_p>
 
-      <div className="wrap">
+      <div className="wrap ">
         <Comment_p></Comment_p>
       </div>
 
       <Footer></Footer>
-
+</div>
     </>
   );
 }

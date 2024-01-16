@@ -11,10 +11,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 
-function Main() {
+function Main({className}) {
 
   return (
-    <div className={MainStyle.banner} >
+    <div className={`${MainStyle.banner} ${className}`} >
 
       <Swiper
         className='position-relative h-100'
