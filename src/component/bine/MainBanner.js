@@ -45,9 +45,15 @@ function Main({className}) {
                   backgroundImage: `url(${el.image}) `
 
                 }}>
-                  <div className={`${MainStyle.content} position-absolute container mx-auto text-center text-lg-start`}>
-                    <h2>{el.title}</h2>
+                  <div className={`${MainStyle.content} position-absolute container mx-auto text-center text-lg-start pt-5 pt-lg-0 `}>
+                    <h2 className='mt-5 mt-lg-0'>{el.title}
+                    <span className='d-md-none d-block text-white'>모바일멘트준비하기</span>
+                    </h2>
+                    
                     <p>{el.txt}</p>
+                    <a href="#none" className='d-none d-lg-none d-md-inline-block border-white border py-2 px-5 text-white'>
+                      더보기 + 
+                    </a>
                   </div>
                 </div>
               </SwiperSlide>

@@ -13,13 +13,13 @@ function Hd() {
           </a>
       </div>
       <Navbar expand="lg">
-        <div className='container-xl'>
-          <Navbar.Brand href="#home" className={`${HdStyle.logo} ms-3 ms-lg-0`}>
+        <div className='container-xl px-0 px-lg-4'>
+          <Navbar.Brand href="#home" className={`${HdStyle.logo} ms-3 ms-lg-0 pb-3 pb-lg-0`}>
             <img src="/img/logo.png" alt="제주테마여행" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" className='border-0' />
-          <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end flex-grow-0'>
-            <Nav className={`${HdStyle.gnbs}`}>
+          <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end flex-grow-0 border-top '>
+            <Nav className={`${HdStyle.gnbs} px-3 px-lg-0`}>
               {
                 naviObj.map((el, idx) => (
                   <Nav.Item as="li" className={idx < (naviObj.length - 1) ? `px-lg-4` : 'ps-lg-4'} key={idx}>
