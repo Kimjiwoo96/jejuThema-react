@@ -46,7 +46,7 @@ function App() {
       </div>
 
 
-      <div className="wrap ">
+      <div className="wrap px-3 px-md-4 px-lg-0">
         <div style={QbtnFix}>
           <Quickbtns
             quickText={{
@@ -92,6 +92,7 @@ function App() {
           <Comment_p></Comment_p>
         </div>
       </div>
+      
       <Footer></Footer>
 
     </>

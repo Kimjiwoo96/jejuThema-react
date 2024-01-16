@@ -3,7 +3,7 @@ import styleFooter from '../scss/kjw/Footer.module.scss'
 
 function Footer() {
     return (
-        <div className={`${styleFooter.fWrap} d-lg-flex text-center text-lg-start justify-content-lg-between`}>
+        <div className={`${styleFooter.fWrap} d-lg-flex text-center text-lg-start justify-content-lg-between py-5 `}>
             <div className={styleFooter.con1}>
                 <div><img src="/img/footerLogo.png" alt="제주테마여행 로고" /></div>
 
