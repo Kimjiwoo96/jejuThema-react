@@ -12,11 +12,26 @@ function Comment(){
     const commentRegistration = (e) => {
         e.preventDefault()
 
-        if(window.confirm("댓글을 등록하시겠습니까?")){
-            setCommentdata((prev) => [{ nicknameValue, commentConText }, ...prev])
-            alert("댓글이 등록되었습니다")
-        };
-        
+        if(nicknameValue == "" || commentConText == ""){
+
+            if(nicknameValue == "" && commentConText == ""){
+                alert("폼을 입력해주세요")
+            }else{
+                if(nicknameValue == ""){
+                    alert("이름 또는 닉네임을 입력해주세요")
+                }
+                if(commentConText == ""){
+                    alert("댓글내용을 입력해주세요")
+                }
+            }
+        }else{
+            if(window.confirm("댓글을 등록하시겠습니까?")){
+                setCommentdata((prev) => [{ nicknameValue, commentConText }, ...prev])
+                alert("댓글이 등록되었습니다")
+                setNicknameValue("")
+                setcommentConText("")
+            };
+        }
         // console.log("이것을 DB로 넘겨야함", commentdata)
     }
 
@@ -38,6 +53,7 @@ function Comment(){
                         <label for="nickname">이름/닉네임</label>
                         <input
                          type="text"
+                         placeholder="이름 or 닉네임"
                          id="nickname"
                          name="nickname"
                          value={nicknameValue}
@@ -48,6 +64,7 @@ function Comment(){
                         <textarea
                         name=""
                         id=""
+                        value={commentConText}
                         cols="30" rows="10"
                         placeholder="내용을 적어주세요"
                         onChange={commentConTextChange}

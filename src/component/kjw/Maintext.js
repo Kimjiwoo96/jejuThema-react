@@ -1,6 +1,10 @@
 function Maintext(MText){
 
-    const center = {textAlign:"center",marginBottom:"40px"}
+    const center = {
+        textAlign:"center",
+        marginBottom:"80px",
+        marginTop : "40px"
+    }
 
     return(
        <div id="mainTitle" style={center}>

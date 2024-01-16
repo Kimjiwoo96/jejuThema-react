@@ -12,20 +12,7 @@ import {Div} from "../js/CommonUi"
 
 function Attraction_p() { 
 
-    const breakpoints = {
-        320: {
-          slidesPerView: 1.5,
-          spaceBetween: -50,
-        },
-        768: {
-          slidesPerView: 2.5,
-          spaceBetween: 100,
-        },
-        1320: {
-          slidesPerView: 4,
-          spaceBetween: 100,
-        }
-      }
+    
 
     return (
         
@@ -35,16 +22,17 @@ function Attraction_p() {
             subTitle=""
         ></Maintext>
         
-        <div className={AttractionStyle.attractionDiv}>
+        <div className={`${AttractionStyle.attractionDiv} my-5` }>
         <Swiper
             modules={[Autoplay]}
             autoplay={{ 
                 delay: 3000,
                 disableOnInteraction : false
             }}
-            spaceBetween={50}
-            slidesPerView={4}
-            breakpoints={breakpoints}
+            centeredSlides={true}
+            spaceBetween={30}
+            slidesPerView={'auto'}
+            // breakpoints={breakpoints}
             loop = {true}
         >
         {
@@ -65,14 +53,15 @@ function Attraction_p() {
                                         <p>{el.txt}</p>
                                         <span>{el.Location}</span>
 
-                                        <ul
+                                        
+                                    </section>
+                                    <ul
                                             className={AttractionStyle.hash}
                                         >
                                             <li>{el.hashTag[0]}</li>
                                             <li>{el.hashTag[1]}</li>
                                             <li>{el.hashTag[2]}</li>
-                                        </ul>
-                                    </section>
+                                    </ul>
                                     
                                 </div>
                                 
