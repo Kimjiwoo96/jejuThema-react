@@ -14,6 +14,7 @@ import 'swiper/css/pagination';
 function Main({className}) {
 
   return (
+    <>
     <div className={`${MainStyle.banner} ${className}`} >
 
       <Swiper
@@ -70,9 +71,11 @@ function Main({className}) {
 
       </Swiper>
 
-      <Apply />
+      <Apply className="d-lg-block d-none" />
 
     </div>
+    <Apply className="d-lg-none" />
+    </>
   )
 }
 

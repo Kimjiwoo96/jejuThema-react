@@ -21,7 +21,7 @@ const StyledButton = styled.button`
 `;
 
 
-function Apply() {
+function Apply({className}) {
   const {
     register,
     handleSubmit,
@@ -31,7 +31,7 @@ function Apply() {
   const onSubmit = (data) => console.log(data)
 
   return (
-    <div className={`${ApplyStyle.apply} `}>
+    <div className={`${ApplyStyle.apply} ${className}`}>
       <div className='container text-center text-lg-end'>
         <div className={`${ApplyStyle.wrap} position-relative d-inline-block text-start`}>
           <form onSubmit={handleSubmit(onSubmit)}>
