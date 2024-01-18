@@ -12,9 +12,18 @@
 <hr>
 <h3>[사용 플러그인]</h3>
 <ul>
-    <li>swiper v11</li>
-    <li>jQuery 2.x</li>
-    <li>bootstrap 5.3.1</li>
+    <li>aos 2.3.4</li>
+    <li>axios 1.6.2</li>
+    <li>bootstrap 5.3.2</li>
+    <li>bootstrap-icons 1.11.3</li>
+    <li>gh-pages 6.1.1</li>
+    <li>react-bootstrap 2.9.2</li>
+    <li>react-icons 5.0.1</li>
+    <li>react-router-dom 6.21.1</li>
+    <li>sass 1.69.7</li>
+    <li>styled-components 6.1.8</li>
+    <li>swiper 11.0.5</li>
+    <li>web-vitals 2.1.4</li>
 </ul>
 <hr>
 <h3>[작업영역]</h3>
