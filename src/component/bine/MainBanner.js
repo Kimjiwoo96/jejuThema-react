@@ -33,8 +33,8 @@ function Main({className}) {
           clickable: true,
           el: ".pagination"
         }}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log('slide change')}
+        // onSwiper={(swiper) => console.log(swiper)}
         loop={true}
 
       >

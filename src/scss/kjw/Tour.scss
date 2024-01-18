@@ -1,0 +1,63 @@
+.tourWrap{
+    box-sizing: border-box;
+    height: 60vh;
+    * {
+    color: #fff;
+    }
+
+    h2{
+        padding-top: 3rem;
+    }
+
+
+    .con{
+        // border:1px solid red;
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 3rem;
+        width: 100%;
+        .line{
+            border:1px solid #fff;
+            box-sizing: border-box;
+            margin-bottom: 1rem;
+        }
+
+       
+        .tourList{
+            box-sizing: border-box;
+            &.active{
+                color: #D48121;
+            }
+
+            .location{
+                box-sizing: border-box;
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                bottom:3ch;
+                font-size: 2rem;
+
+                &.active i{
+                    color: #D48121;
+                }
+            }
+        }
+    }
+
+    
+
+    img{
+        top: 0;
+        left:0;
+        right:0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .graybg{
+        background-color: #000;
+    }
+}
